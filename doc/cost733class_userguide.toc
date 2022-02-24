@@ -1,0 +1,106 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Installation}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}Getting the source code}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}Using configure and make}{2}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}configure}{3}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}make}{4}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Manual compilation as an alternative}{4}{section.2.3}
+\contentsline {section}{\numberline {2.4}Troubleshooting}{5}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}For configure}{5}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}For make}{5}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}For runtime problems}{5}{subsection.2.4.3}
+\contentsline {chapter}{\numberline {3}Getting started}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Principal usage}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Quick start}{8}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Creating classifications}{8}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Evaluating classifications}{9}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Comparing classifications}{9}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Assignment to existing classifications}{9}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Rather simple (pre)processing}{10}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Help listing}{10}{section.3.3}
+\contentsline {chapter}{\numberline {4}Data input}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1}Foreign formats}{18}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}ASCII data file format}{18}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}COARDS NetCDF data format}{19}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}GRIB data format}{19}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Other data formats}{20}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Self-generated formats}{20}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Binary data format}{20}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Catalog files}{20}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Files containing class centroids}{21}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Specifying data input and preprocessing}{21}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Specification flags}{22}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Flags for data set description}{23}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Flags for spatial data Selection}{25}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Flags for data Preprocessing}{25}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Flags for data post processing}{28}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.6}Options for selecting dates}{28}{subsection.4.3.6}
+\contentsline {subsection}{\numberline {4.3.7}Using more than one data set}{29}{subsection.4.3.7}
+\contentsline {subsection}{\numberline {4.3.8}Options for overall PCA preprocessing of all data sets together}{30}{subsection.4.3.8}
+\contentsline {section}{\numberline {4.4}Examples}{30}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Simple ASCII data matrix}{30}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}ASCII data file with date columns}{31}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}NetCDF data selection}{32}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Date selection for classification and centroids}{32}{subsection.4.4.4}
+\contentsline {chapter}{\numberline {5}Data output}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}The classification catalog}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}Centroids or type composites}{33}{section.5.2}
+\contentsline {section}{\numberline {5.3}Output on the screen}{33}{section.5.3}
+\contentsline {section}{\numberline {5.4}Output of the input data}{34}{section.5.4}
+\contentsline {section}{\numberline {5.5}Output of indices used for classification}{34}{section.5.5}
+\contentsline {section}{\numberline {5.6}Opengl graphics output}{34}{section.5.6}
+\contentsline {chapter}{\numberline {6}Classification methods}{35}{chapter.6}
+\contentsline {section}{\numberline {6.1}Methods using predefined types}{35}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}INT | interval | BIN | binclass}{35}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}GWT | prototype - large scale circulation types}{36}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}GWTWS | gwtws - large scale circulation types}{38}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}LIT | lit - litynski threshold based method}{40}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.5}JCT | jenkcol - Jenkinson-Collison Types}{43}{subsection.6.1.5}
+\contentsline {subsection}{\numberline {6.1.6}WLK | wlk - automatic weather type classification according to German metservice}{46}{subsection.6.1.6}
+\contentsline {section}{\numberline {6.2}Methods based on Eigenvectors}{51}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}PCT | tpca - t-mode principal component analysis using oblique rotation}{51}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}PTT | tpcat - t-mode principal component analysis using orthogonal rotation}{53}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}PXE | pcaxtr - the extreme score method}{54}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}KRZ | kruiz - Kruizingas PCA-based types}{56}{subsection.6.2.4}
+\contentsline {section}{\numberline {6.3}Methods using the leader algorithm}{59}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}LND | lund - the Lund-method}{59}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}KIR | kh - Kirchhofer}{61}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}ERP | erpicum}{62}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}HCL | hclust - Hierarchical Cluster analysis}{65}{section.6.4}
+\contentsline {section}{\numberline {6.5}Optimization algorithms}{67}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}KMN | kmeans - conventional k-means with random seeds}{67}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}CAP | pcaca - k-means of time filtered PC-scores and HCL starting partition}{69}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}CKM | ckmeans - k-means with dissimilar seeds}{70}{subsection.6.5.3}
+\contentsline {subsection}{\numberline {6.5.4}DKM | dkmeans - a variant of ckmeans}{73}{subsection.6.5.4}
+\contentsline {subsection}{\numberline {6.5.5}PXK | pcaxtrkm - k-means using PXE starting partitions}{75}{subsection.6.5.5}
+\contentsline {subsection}{\numberline {6.5.6}SAN | sandra - simulated annealing and diversified randomization}{76}{subsection.6.5.6}
+\contentsline {subsection}{\numberline {6.5.7}SOM | som - self organizing (feature) maps (neural network according to Kohonen)}{78}{subsection.6.5.7}
+\contentsline {subsection}{\numberline {6.5.8}KMD | kmedoids - partitioning around medoids}{79}{subsection.6.5.8}
+\contentsline {section}{\numberline {6.6}Random classifications}{81}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}RAN | random}{81}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}RAC | randomcent}{82}{subsection.6.6.2}
+\contentsline {chapter}{\numberline {7}Assignments to existing classifications}{84}{chapter.7}
+\contentsline {section}{\numberline {7.1}ASC | assign}{84}{section.7.1}
+\contentsline {section}{\numberline {7.2}CNT | centroid}{85}{section.7.2}
+\contentsline {chapter}{\numberline {8}Evaluation of classifications}{86}{chapter.8}
+\contentsline {section}{\numberline {8.1}EVPF | evpf - explained variation and pseudo F value}{86}{section.8.1}
+\contentsline {section}{\numberline {8.2}ECV | exvar}{87}{section.8.2}
+\contentsline {section}{\numberline {8.3}WSDCIM | wsdcim - Within-type standard deviation and confidence interval of the mean}{87}{section.8.3}
+\contentsline {section}{\numberline {8.4}DRAT | drat - Ratio of distances within and between circulation types}{88}{section.8.4}
+\contentsline {section}{\numberline {8.5}FSIL | fsil - Fast Silhouette Index}{89}{section.8.5}
+\contentsline {section}{\numberline {8.6}SIL | sil - Silhouette Index}{90}{section.8.6}
+\contentsline {section}{\numberline {8.7}BRIER | brier - Brier Score}{90}{section.8.7}
+\contentsline {chapter}{\numberline {9}Comparison of classifications}{92}{chapter.9}
+\contentsline {section}{\numberline {9.1}CPART | cpart - Catalog comparison}{92}{section.9.1}
+\contentsline {chapter}{\numberline {10}Miscellaneous functions}{93}{chapter.10}
+\contentsline {section}{\numberline {10.1}AGG | agg - Aggregation}{93}{section.10.1}
+\contentsline {section}{\numberline {10.2}COR | cor - Correlation}{93}{section.10.2}
+\contentsline {section}{\numberline {10.3}SUB | substitute - Substitute}{93}{section.10.3}
+\contentsline {chapter}{\numberline {11}Visualization}{95}{chapter.11}
+\contentsline {chapter}{\numberline {12}Development}{96}{chapter.12}
+\contentsline {section}{\numberline {12.1}Implementing a new subroutine}{96}{section.12.1}
+\contentsline {section}{\numberline {12.2}Packing the directory for shipping}{98}{section.12.2}
+\contentsline {section}{\numberline {12.3}Use of variables in the subroutine}{98}{section.12.3}
+\contentsline {section}{\numberline {12.4}Using the input data from datainput.f90}{99}{section.12.4}
+\contentsline {section}{\numberline {12.5}The gnu autotools files}{100}{section.12.5}
+\contentsline {chapter}{References}{103}{lstnumber.-104.51}

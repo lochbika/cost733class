@@ -1,0 +1,408 @@
+
+USAGE: ../src/cost733class -dat <specification> [-dat <specification>] [options]
+
+OPTIONS:
+
+ ____________________________________________________________________
+ INPUT DATA:
+
+ -dat <char>    : specification of input data. More than one '-dat' arguments 
+                : are allowed to combine data of same sample size but from 
+                : different files in different formats.
+                : <char> consists of various specifications separated by the 
+                : character '@' or one or more blanks ' ':
+                :   @var:<name of variable> for fmt:netcdf this must be the 
+                :        variable name in the netcdf file
+                :   @pth:<path for input data file>
+                :        in case of netcdf it may include "?" symbols to be 
+                :        replaced by numbers given by the fdt: and ldt: flags.
+                :   @fmt:<"ascii" or "netcdf" or "grib"> default ascii
+                :        If file name ends with ".nc" netcdf is assumed;
+                :        for ".grib/.grb/.gribX/.grbX" (X=[1,2]) grib is assumed.
+                :     ascii: (default) ascii file with one line per day (object 
+                :            to classify) and one column per variable (parameter 
+                :            defining the objects) the columns have to be delimited
+                :            by one or more blanks. The number of objects and 
+                :            variables is scanned by this program on its own.
+                :     netcdf: data in self describing netcdf format. 
+                :            time and grid is scanned automatically.
+                :     grib: data in self describing format. 
+                :            time and grid is scanned automatically.
+                :   @dtc:<1-4> (number of leading date columns: year, month, 
+                :        day, hour in ascii file)
+                :   @fdt:<YYYY:MM:DD:HH> first date in dataset (description)
+                :   @ldt:<YYYY:MM:DD:HH> last date in dataset (description)
+                :   @ddt:<int><y|m|d|h> time step in data set in years, months,
+                :        days or hours
+                :   @mdt:<list of months> months in data set, e.g. @mdt:1:2:12
+                :   @lon:<minlon>:<maxlon>:<diflon> longitude description
+                :   @lat:<minlat>:<maxlat>:<diflat> latitude description
+                :   @slo:<minlon>:<maxlon>:<diflon> longitude selection
+                :   @sla:<minlat>:<maxlat>:<diflat> latitude selection
+                :   @sle:<level between 1000 and 10> selection
+                :   @arw:<integer> area weighting 1=cos(latitude), 
+                :        2=sqrt(cos(latitude)),
+                :        3=calculated weights by area of grid box which is the same
+                :        as cos(latitude) of option 1
+                :   @scl:<float> scaling of data values
+                :   @off:<float> offset value to add after scaling
+                :   @nrm:<int> object (row-wise) normalisation:
+                :        1=centering,2=std(sample),3=std(population)
+                :   @ano:<int> variable (column-wise) normalisation:
+                :        done after selection of time steps:
+                :          -1=centering,-2=std(sample),-3=std(population)
+                :        done before selection of time steps:
+                :          1=centering,2=std(sample),3=std(population)
+                :          11=centering for days of year,
+                :          12=std for days (sample),13=std(population)
+                :          21=centering for months,
+                :          22=std for months (sample),
+                :          23=std(population)
+                :          31=centering on monthly mean (running 31day window),
+                :          32=std for months (sample) (running 31day window),
+                :          33=std (population) (running 31day window)
+                :   @fil:<integer> gaussian time filter int>0 -> low-pass 
+                :        int<0 -> high-pass
+                :   @pca:<float|integer> PCA of parameter data set: 
+                :        if <float>: for retaining explained variance
+                :        fraction, if <int>: number of PCs
+                :   @pcw:<float|integer> as @pca but with weighting by 
+                :        explained variance
+                :   @seq:<sequence length for extension> 
+                :   @wgt:<weighting factor>
+
+                :   @cnt:<file name> file name to write centroid/composite 
+                :        values to if extension = "*.nc" it is netcdf format, 
+                :        ascii otherwise (with coordinates for *.txt, without 
+                :        for *.dat).
+
+ -readncdate    : read the date of observations from netcdf time variable rather 
+                :        than calculating it from "actual range" attribute of the
+                :        time variable (slows down the data input but can override
+                :        buggy attribute entries as e.g in slp.2011.nc).
+
+
+ -per <char>    : period selection, <char> is e.g. 2000:1:1:12,2008:12:31:12,1d
+
+ -mon <char>    : list of months to classify: MM,MM,MM,...
+                :    e.g.: -mon 12,01,02 classifies winter data (default is all
+                :     months), only applies if -per is defined!
+
+ -mod           : LIT: set all months to be 30 days long (relevant for -met lit)
+                
+ -dlist <char>  : list file name for selecting a subset of dates within the 
+                : given period for classification. Each line has to hold one 
+                : date in form: "YYYY MM DD HH" for year, month, day, hour.
+                : If hour, day or month is irrelevant please provide the constant
+                : dummy number 00.
+                
+ -cat <spec>    : classification catalog input, where <spec> consists of the following 
+                  flags:
+                   @pth:<path for file>
+                   @fdt:<first date>
+                   @ldt:<last date>
+                   @ddt:<time step, e.g. "@ddt:1d" for one day>
+                   @dtc:<number of date columns>
+                   @mdt:<list of months> e.g. "@mdt:01,02,12"
+ -catname <char> : file with as many lines as catalogs read in by "-cat",
+                   each line contains the name of the catalog of the corresonding
+                   column in the catalog file.
+                
+ -cntin <char>  : centroid input file for -met ASS and ASC
+                
+ -pca <float|integer>: PCA of input data all together: 
+                : if <float>: for retaining explained variance fraction
+                : if <int>: number of PCs
+ 
+ -pcw <float|integer>: PCA of input data, PCs weighted by explained variance: 
+                : if <float>: for retaining explained variance fraction
+                : if <int>: number of PCs
+ ____________________________________________________________________
+ OUTPUT:
+
+ -cla <clafile> : name of classification output file (contains number of class
+                : for each object in one line).
+                : default = ./<basename(datfile)>_<method>_ncl<int>.cla
+
+ -mcla <clafile>: multiple classification output file. Some methods generate
+                : more than one (-nrun) classification and select the best.
+                : option -mcla <file> makes them writing out all.
+
+ -skipempty <F|T> : skip empty classes in the numbering scheme? T=yes, F=no
+                : Default is "T"
+                
+ -writedat <char>: write preprocessed input data into file name <char>
+                
+ -dcol <int>    : write datum columns to the cla outputfile:
+                : <int>=1: year, <int>=2: year,month, <int>=3: year,month,day,
+                : <int>=4: year,month,day,hour 
+
+ -cnt <char>    : write centroid data to file named <char> (contains composites
+                : of the input data for each type in a column).
+ -sub <char>    : method SUB: write substitute data to file named <char>
+ -agg <char>    : method AGG: write aggregated data to file named <char>
+ -idx <char>    : write index data used for classification to file named
+                : <char>.<ext>
+                : the type of the indices dependes on the method (e.g. scores
+                :  and loading for PCT)
+
+ -opengl        : this switch activates the 3D-visualisation output calls for
+                :  the following methods:
+                : SOM -crit 2, SAN, CKM.
+                : This is only working without parallelization and probably on
+                :  unix/linux systems
+                : The software compilation has to be configured by 
+                : "./configure --enable-opengl".
+
+ -gljpeg        : in conjunction with -opengl this switch produces single
+                : jpg-images which can be used to create animations.
+
+ -glwidth       : width of opengl graphics window (default=800)
+
+ -glheight      : height of opengl graphics window (default=800)
+
+ -glpsize       : size of data points (default=0.004D0)
+
+ -glcsize       : size of centroid points (default=0.03D0)
+
+ -glxangle <real> : angle to tilt view on data cube (default = -60.D0)
+
+ -glyangle <real> : angle to tilt view on data cube (default = 0.D0)
+
+ -glzangle <real> : angle to tilt view on data cube (default = 35.D0)
+
+ -glstep        : time stepping (default=10)
+
+ -glpause       : pause length (default=1)
+
+ -glbackground <int> : background color: 0=black (default), 1=white
+
+ -glrotangle <angle> : rotation angle step for spinning cube
+
+ ____________________________________________________________________
+ METHODS:
+
+ -met <method>  : method :
+
+                : NON|none      : just read (and write) data and exit
+
+                : INT|interval|BIN : classify into intervals of variable -svar
+
+                : GWT|prototype : prototype 'grosswetterlagen', correlation based,
+                :                 resulting in 26 types
+                : GWTWS|gwtws   : based on GWT (above) using 8 types,
+                :                 resulting in 11 types
+                : LIT|lit       : litynski thresholds, one circulation field, 
+                :                 dates, ncl=9|18|27
+                : JCT|jenkcoll  : Jenkinson Collison scheme
+                : WLK|wlk       : threshold based using pressure, wind, 
+                :                 temperature and humidity
+
+                : PCT|TPC|tmodpca: t-mode principal component analysis of 10 data
+                :                 subsets, oblique rotation
+                : PTT|TPT|tmodpcat: t-mode principal component analysis,
+                :                 varimax rotation
+                : PXE|pcaxtr    : s-mode PCA using high positive and negative
+                :                 scores to classify objects
+                : KRZ|kruiz     : Kruizinga PCA scheme
+
+                : LND|lund      : count most frequent similar patterns (-thres)
+                : KIR|kirchhofer: count most frequent similar patterns (-thres)
+                : ERP|erpicum   : count most frequent similar patterns, angle 
+                :                 distance, adjusting thresholds
+
+                : HCL|hclust    : hierarchical cluster analysis (Murtagh 1986), 
+                :                 see parameter -crit !
+
+                : KMN|kmeans    : k-means cluster analyis (Hartigan/Wong 1979 
+                :                 algorithm )
+                : CKM|ckmeans   : like dkmeans but eventually skips small clusters
+                :                 <5% population
+                : DKM|dkmeans   : k-means  (simple algorithm) with most different
+                :                 start patterns
+                : SAN|sandra    : simulated annealing and diversified randomisation
+                :                 clustering
+                : SOM|som       : self organising maps (Kohonen neural network)
+                : KMD|kmedoids  : Partitioning Around Medoids
+
+                : RAN|random    : just produce random classification catalogues
+                : RAC|randomcent: determine centroids by random and assign objects
+                :                 to it.
+
+                : ASC|assign    : no real method: just assign data to given
+                :                 centroids provided by -cntin
+                : SUB|substitute: substitute catalog numbers by values given in a -cntin file
+                :                 
+                : AGG|aggregate : build seasonal values out of daily or monthly values.
+                :                 
+                : COR|correlate : calculate correlation metrics comparing the input data variables.
+                :                 
+                : CNT|centroid  : calculate centroids of given catalog (-clain)
+                :                 and data (see -dat), see also -cnt
+
+                : ECV|exvar     : evaluation of classifications by Explained
+                :                 Cluster Variance (see -clain -crit)
+                : EVPF|evpf    : evaluation in terms of explained variation
+                :                 and pseudo F value (-clain)
+                : WSDCIM|wsdcim: evaluation in terms of within-type SD and
+                :                confidence interval (-clain)
+                : FSIL|fsil     : evaluation in terms of the Fast Silhouette
+                :                 Index (-clain)
+                : SIL|sil       : evaluation in terms of the Silhouette Index
+                :                 (-clain)
+                : DRAT|drat     : evaluation in terms of the distance ratio
+                :                 within and between classes (-clain)
+                : CPART|cpart   : calculate comparison indices for >= 2 given
+                :                 partitions (-clain)
+                : ARI|randindex : calculate only (adjusted) Rand indices for
+                :                 two or more partitions given by -clain
+
+ -crit <int>    : INT|interval:
+                :   1 = calculate thresholds as i'th percentile where i=cl*1/ncl
+                :   2 = bins centered around the mean value
+                :   3 = bin size is the data-range/ncl, the bins are not centered.
+                :   4 = 2 bins divided by -thres <real> for -svar <int>.
+                :   5 = as 4 but threshold is interpreted a percentile (0 to 100).
+                : HCL: (hierarchical clustering): number of criterion :
+                :   1 = Ward's minimum variance method
+                :   2 = single linkage
+                :   3 = complete linkage
+                :   4 = average linkage
+                :   5 = Mc Quitty's method
+                :   6 = median (Gower's) method
+                :   7 = centroid method
+                : GWT:
+                :   1 = raw coefficients for vorticity (default)
+                :   2 = normalized vorticity coefficients
+                : GWTWS:
+                :   1 = classification based on absolut values (default)
+                :   2 = classification based on percentiles
+                : ECV:
+                :   1 = monthly normalized data (default)
+                :   0 = raw data for calculating explained cluster variance.
+                : PCT: rotation criteria:
+                :   1 = direct oblimin, gamma=0 (default)
+                : WLK:
+                :   0 = use raw cyclonicity for deciding anticyclonic or cylonic (default)
+                :   1 = use anomalies of cyclonicity
+                : JCT:
+                :   1 = centered classification grid with an extend of 30 W-E;20 N-S (default)
+                :   2 = classification grid extended to data region
+                : SOM:
+                :   1 = 1-dimensional network topology
+                :   2 = 2-dimensional network topology
+                : KMD:
+                :   0 = use Chebychev distance d=max(|xa-xb|)
+                :   1 = use Manhattan distance d=sum(|xa-xb|)
+                :   2 = use Euclidean distance d=sqrt(sum((xa-xb)**2))
+                :   p = use Minkovski distance of order p: d=(sum(|xa-xb|**p))**(1/p)
+                : PXE/PXK:
+                :   0 = only normalize patterns for PCA (original)
+                :   1 = normalize patterns and normalize gridpoint values afterwards (default)
+                :   2 = normalize patterns and center gridpoint values afterwards 
+                : EVPF, WSDCIM, FSIL, SIL, DRAT:
+                :   0 = evaluate on the basis of the original data values
+                :   1 = evaluate on the basis of daily anomaly values
+                :   2 = evaluate on the basis of monthly anomlay values
+                : BRIER:
+                :   1 = quantile to absolut values (default)
+                :   2 = quantile to euclidean distances between patterns
+
+ -thres <real>  : KRC and LND: distance threshold to search for key patterns
+                :  default = 0.4 for kirchhofer and 0.7 for lund.
+                : INT: threshold between bins.
+                : WLK: fraction of gridpoints for decision on main wind sector (default=0.6)
+                : PXE/PXK: threshold defining key group (default=2.0)
+                : BRIER: quantile [0,1] (default=0.9) to define extreme-events. An event is
+                :  defined when the euclidean distance to the periods/seasonal/monthly mean-pattern
+                :  is greater than the given quantile. If <thres> is signed negative (e.g. -0.8),
+                :  than events are defined if smaller than the given quantile.
+
+ -shift         : WLK: shift 90 degree wind sectors by 45 degree. Default is no shift.
+
+ -ncl <int>     : number of classes (must be between 2 and 256)
+
+ -nrun <int>    : number of runs (for SAN, SAT, SOM, KMN) for selection of best result.
+                :  Cluster analysis is by design an unstable method for complex datasets.
+                :  The more repeated runs are used to select the best result the more robust 
+                :  is the result. SOM and SAN are designed to be much more robust than KMN.
+                :  default = -nrun 1000 to produce reliable results!
+
+ -step   <int>  : SOM: number of epochs after which neighbourhood radius is to be reduced
+                :  For training the neurons, also neighboured neurons of the winner neuron
+                :  in the network-map are affected and adapted to the training pattern (to a
+                :  lower degree though). The neighbourhood radius covers all neurons (classes
+                :  at the beginning and is reduced during the process until only the winner neuron
+                :  is affected. This slow decrease helps to overcome local minima in the optimisation
+                :  function.
+                :  default = -step 10 (meaning after 10 epochs neighbourhood radius is reduced
+                :  by one).
+                : WLK: number of windsectors
+                : EVPF, WSDCIM, FSIL, SIL, DRAT, CPART: missing value indicator for catalogue data
+
+ -niter <int>    : SOM, SAN, PXE, PXK: maximum number of epochs/iterations to run
+                :  defaults:
+                :  -niter 0 for pcaxtr means that only the first assignment to the pc-centroids is done.
+                :  for PXK -niter is 9999999 (means 9999999 k-means iterations)
+                :  for SAN there is no default for -niter (infinity). Enable it if SAN ends up in an endless loop.
+
+ -temp <real>   : simulated annealing start temperature (for CND)
+                :  default = 1
+
+ -cool <real>   : cooling rate (for som & sandra)
+                :  default = -cool 0.99D0 ; set to 0.999D0 or closer to 1.D0 to enhance (and slow down).
+
+ -svar <int>    : tuning parameter
+                :  INT: number of variable/column to use for calculatin interval thresholds.
+
+ -alpha <real>  : tuning parameter
+                :  WLK: central weight for weighting mask (default=3.D0)
+                :  EVPF, WSDCIM, FSIL, SIL, DRAT: scale factor for evaluation data
+                :  BRIER:
+                :    if < 0 => (default) use all values (-crit 1) or patterns (-crit 2)
+                :    if >=0 => a value or pattern is processed only if itself or mean(pattern) > alpha.
+                :  GWTWS: value/percentile for low winds (main threshold for types 9,10,11)
+
+ -beta <real>   : tuning parameter
+                :  WLK: middle zone weight for weighting mask (default=2.D0)
+                :  EVPF, WSDCIM, FSIL, SIL, DRAT: offset value for evaluation data
+                :  GWTWS: value/percentile for flat winds (type 11)
+
+ -gamma <real>  : tuning parameter
+                :  WLK: margin zone weight for weighting mask (default=1.D0)
+                :  WSDCIM: confidence level for estimating the confidence interval of the mean
+                :  GWTWS: value/percentile for low pressure (type 9)
+
+ -delta <real>  : tuning parameter
+                :  WLK: width factor for weigthing zones (nx*delta|ny*delta) (default=0.2)
+                :  PXE/PXK: score limit for other PCs to define uniquely leading PC (default 1.0)
+                :  GWTWS: value/percentile for high pressure (type 10)
+
+ -lambda <real> : tuning parameter
+                :  SAT:  weighting factor for time constrained clustering (default=1.D0)
+
+ -dist <int>    : distance metric (not for all methods yet):
+                :   if int > 0: Minkowski distance of order int (0=Chebychev),
+                :   if int =-1: 1-correlation coefficient.
+
+ -nx <int>      : KIR: number of longitudes, needed for row and column correlations
+                : DRAT: distance measure to use (1=euclidean distance, 2=pearson correlation)
+
+ -ny <int>      : KIR: number of latitudes
+
+ -wgttyp euclid|normal : adjust weights for simulating Euclidean distances of original
+                :  data or not.
+
+ ____________________________________________________________________
+ OTHER:
+
+ -v <int>       : verbose: default = '-v 0', i.e. quiet (not working for all routines yet),
+                : 0 = show nothing, 1 = show essential information, 2 = information about routines
+                : 3 = show detailed informations about routines work (slows down computation significantly).
+
+ -help          : generate this output and exit
+
+ ____________________________________________________________________
+
+   
+

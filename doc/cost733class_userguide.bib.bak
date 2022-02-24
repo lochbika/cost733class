@@ -1,0 +1,409 @@
+% This file was created with JabRef 2.7b.
+% Encoding: UTF-8
+
+@ARTICLE{Beck2007,
+  author = {C. Beck and J. Jacobeit and P.D. Jones},
+  title = {Frequency and within-type variations of large scale circulation types
+	and their effects on low-frequency climate variability in Central
+	Europe since 1780},
+  journal = {Int. J. Climatology},
+  year = {2007},
+  volume = {27},
+  pages = {473--491},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Beck2010,
+  author = {C. Beck and A. Philipp},
+  title = {Evaluation and comparison of circulation type classifications for
+	the European domain},
+  journal = {Physics and Chemistry of the Earth},
+  year = {2010},
+  volume = {35},
+  pages = {374--387},
+  number = {9-12},
+  owner = {dmarta}
+}
+
+@ARTICLE{Bernaards2005,
+  author = {C.A. Bernaards and R.I. Jennrich},
+  title = {Gradient Projection Algorithms and Software for Arbitrary Rotation
+	Criteria in Factor Analysis},
+  journal = {Educational and Psychological Measurement},
+  year = {2005},
+  volume = {65/5},
+  pages = {676},
+  doi = {10.1177/0013164404272507},
+  owner = {philipan},
+  timestamp = {2011.08.12},
+  url = {http://epm.sagepub.com/cgi/content/abstract/65/5/676}
+}
+
+@INCOLLECTION{Bissolli2003,
+  author = {P. Bissolli and E. Dittmann},
+  title = {Objektive Wetterlagenklassen},
+  booktitle = {Klimastatusbericht 2003},
+  publisher = {DWD},
+  year = {2003},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Blair1998,
+  author = {D. Blair},
+  title = {The Kirchhofer technique of synoptic typing revisited},
+  journal = {Int. J. Climatology},
+  year = {1998},
+  volume = {18},
+  pages = {1625--1635},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Buishand1997,
+  author = {T.A. Buishand and T. Brandsma},
+  title = {Comparison of circulation classification schemes for predicting temperature
+	and precipitation in the Netherlands},
+  journal = {Int. J. Climatology},
+  year = {1997},
+  volume = {17},
+  pages = {875--889},
+  owner = {philipan},
+  timestamp = {2010.02.13}
+}
+
+@ARTICLE{Calinski1974,
+  author = {T. Calinski and J. Harabasz},
+  title = {A dendrite method for cluster analysis},
+  journal = {Commun. Stat.},
+  year = {1974},
+  volume = {3},
+  pages = {1--27},
+  owner = {dmarta}
+}
+
+@ARTICLE{Comrie1996,
+  author = {A.C. Comrie},
+  title = {An all-season synoptic climatology of air pollution in the U.S.-Mexico
+	border region},
+  journal = {Professional Geographer},
+  year = {1996},
+  volume = {48},
+  pages = {237--251},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Dittmann1995,
+  author = {E. Dittmann and S. Barth and J. Lang and G. Mueller-Westermeier},
+  title = {Objektive Wetterlagenklassifikation},
+  journal = {Ber. Dt. Wetterd.},
+  year = {1995},
+  volume = {197},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Ekstrom2002,
+  author = {M. Ekstroem and P. Joensson and L. Baerring},
+  title = {Synoptic pressure patterns associated with major wind erosion events
+	in southern Sweden 1973 1991},
+  journal = {Climate Research},
+  year = {2002},
+  volume = {23},
+  pages = {51--66},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Enke2005a,
+  author = {W. Enke and F. Schneider and Th. Deutschl{\"a}nder},
+  title = {A novel scheme to derive optimized circulation pattern classifications
+	for downscaling and forecast purposes},
+  journal = {Theor. Appl. Climatol.},
+  year = {2005},
+  volume = {82},
+  pages = {51--63},
+  owner = {philipan},
+  timestamp = {2009.04.06}
+}
+
+@ARTICLE{Enke1997,
+  author = {W. Enke and A. Spekat},
+  title = {Downscaling Climate Model Outputs {into} {local} and {regional} Weather
+	Elements by Classification and Regression},
+  journal = {Climate Research},
+  year = {1997},
+  volume = {8},
+  pages = {195--207},
+  owner = {philipan},
+  timestamp = {2009.04.06}
+}
+
+@BOOK{Hartigan1975,
+  title = {Clustering Algorithms},
+  publisher = {John Wiley \& Sons},
+  year = {1975},
+  editor = {R.A. Bradley and J.S. Hunter and D.G. Kendall and G.S.Watson},
+  author = {J.A. Hartigan},
+  pages = {351},
+  series = {Wiley Series in probability and mathematical statistics},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Hewitson1992,
+  author = {B. Hewitson and R.G. Crane},
+  title = {Regional climates in the GISS global circulation model and synoptic-scale
+	circulation},
+  journal = {Journal of Climate},
+  year = {1992},
+  volume = {5},
+  pages = {1002--1011},
+  owner = {philipan},
+  timestamp = {2010.09.27}
+}
+
+@ARTICLE{Huth2000,
+  author = {R. Huth},
+  title = {A circulation classification scheme applicable in GCM studies},
+  journal = {Theor. Appl. Climatol.},
+  year = {2000},
+  volume = {67},
+  pages = {1--18},
+  owner = {philipan},
+  timestamp = {2011.08.12}
+}
+
+@ARTICLE{Huth1996,
+  author = {R. Huth},
+  title = {An intercomparison of computer-assisted circulation classification
+	methods},
+  journal = {Int. J. Climatol.},
+  year = {1996},
+  volume = {16},
+  pages = {893--922},
+  owner = {dmarta}
+}
+
+@INCOLLECTION{Jenkinson1977,
+  author = {A.F. Jenkinson and B.P. Collison},
+  title = {An initial climatology of gales over the North Sea},
+  booktitle = {Synop. Climatol. Branch, Memo. 62},
+  publisher = {Meteorological Office},
+  year = {1977},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Jolliffe2010,
+  author = {I.T. Jolliffe and A. Philipp},
+  title = {Some recent ideas in cluster analysis},
+  journal = {Physics and Chemistry of the Earth},
+  year = {2010},
+  volume = {35},
+  pages = {309--315},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Jones1992,
+  author = {P.D. Jones and M. Hulme and K.R. Briffa},
+  title = {A comparison of Lamb circulation types with an objective classification
+	scheme},
+  journal = {International Journal of Climatology},
+  year = {1993},
+  volume = {13},
+  pages = {655--663},
+  owner = {philipan},
+  timestamp = {2010.03.09}
+}
+
+@ARTICLE{Kalkstein1987,
+  author = {L. S. Kalkstein and G. Tan and J. A. Skindlov},
+  title = {An evaluation of three clustering procedures for use in synoptic
+	climatological classification},
+  journal = {J. Appl. Meteor.},
+  year = {1987},
+  volume = {26},
+  pages = {717--730},
+  owner = {dmarta}
+}
+
+@ARTICLE{Kalnay1996,
+  author = {E. Kalnay and M. Kanamitsua and R. Kistlera and W. Collinsa and D.
+	Deavena and L. Gandina and M. Iredella and S. Sahaa and G. Whitea
+	and J. Woollena and Y. Zhua and A. Leetmaaa and R. Reynoldsa and
+	M. Chelliahb and W. Ebisuzakib and W. Higginsb and J. Janowiakb and
+	K.C. Mob and C. Ropelewskib and J. Wangb and Roy Jennec and Dennis
+	Josephc},
+  title = {The NCEP/NCAR 40-year reanalysis project},
+  journal = {Bull. Amer. Meteor. Soc.},
+  year = {1996},
+  volume = {77},
+  pages = {437--470},
+  owner = {philipan},
+  timestamp = {2009.08.09}
+}
+
+@INCOLLECTION{Kirchhofer1974,
+  author = {W. Kirchhofer},
+  title = {Classification of European 500 mb patterns},
+  booktitle = {Arbeitsbericht der Schweizerischen Meteorologischen Zentralanstalt},
+  publisher = {Bundesamt fuer Meteorologie und Klimatologie MeteoSchweiz},
+  year = {1974},
+  volume = {43},
+  pages = {16},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Kruizinga1979,
+  author = {Kruizinga, S.},
+  title = {Objective classification of daily 500 mbar patterns.},
+  journal = {Preprints Sixth Conference on Probability and Statistics in Atmospheric
+	Sciences, 9-12 October 1979 Banff, Alberta},
+  year = {1979},
+  pages = {126-129},
+  address = {Boston, MA},
+  booktitle = {Preprints Sixth Conference on Probability and Statistics in Atmospheric
+	Sciences, 9-12 October 1979 Banff, Alberta},
+  organization = {American Meteorological Society},
+  owner = {lochbika},
+  timestamp = {2014.03.19}
+}
+
+@ARTICLE{Kuncheva2004,
+  author = {L.I. Kuncheva and S. T. Hadjitodorov},
+  title = {Using diversity in cluster ensembles},
+  journal = {2004 IEEE International Conference on Systems, Man and Cybernetics},
+  year = {2004},
+  volume = {2},
+  pages = {1214--1219},
+  owner = {dmarta}
+}
+
+@ARTICLE{Hubert1985,
+  author = {L.Hubert and P. Arabie},
+  title = {Comparing Partitions},
+  journal = {Journal of Classification},
+  year = {1985},
+  volume = {2},
+  pages = {193--218},
+  owner = {dmarta}
+}
+
+@ARTICLE{Litynski1969,
+  author = {J. Litynski},
+  title = {A numerical classification of circulation patterns and weather types
+	in Poland. (In Polish)},
+  journal = {Prace Panstwowego Instytutu Hydrologiczno-Meteorologicznego},
+  year = {1969},
+  volume = {97},
+  pages = {3?15},
+  owner = {philipan}
+}
+
+@ARTICLE{Lund1963,
+  author = {I.A. Lund},
+  title = {Map-pattern classification by statistical methods},
+  journal = {J. Appl. Meteorol.},
+  year = {1963},
+  volume = {2},
+  pages = {56--65},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+
+@ARTICLE{Milligan1985,
+  author = {G. Milligan and M. Cooper},
+  title = {An examination of procedures for determining the number of clusters
+	in a data set},
+  journal = {Psychometrika},
+  year = {1985},
+  volume = {50},
+  pages = {159--179},
+  owner = {dmarta}
+}
+
+@ARTICLE{Philipp2010,
+  author = {Andreas Philipp and Judit Bartholy and Christoph Beck and Michel
+	Erpicum and Pere Esteban and Xavier Fettweis and Radan Huth and Paul
+	James and Sylvie Jourdain and Frank Kreienkamp and Thomas Krennert
+	and Spyros Lykoudis and Silas C. Michalides and Krystyna Pianko-Kluczynska
+	and Piia Post and Domingo Rasilla Alvarez and Reinhard Schiemann
+	and Arne Spekat and Filippos S. Tymvios},
+  title = {Cost733cat - A database of weather and circulation type classifications},
+  journal = {Physics and Chemistry of the Earth},
+  year = {2010},
+  volume = {35},
+  pages = {360--373},
+  number = {9-12},
+  owner = {philipan},
+  timestamp = {2010.02.13}
+}
+
+@ARTICLE{Rand1971,
+  author = {W. M. Rand},
+  title = {Objective criteria for the evaluation of clustering methods},
+  journal = {J. Amer. Stat. Assoc.},
+  year = {1971},
+  volume = {66},
+  pages = {846--850},
+  owner = {dmarta}
+}
+
+@ARTICLE{Rousseeuw1987,
+  author = {P. Rousseeuw},
+  title = {Rousseeuw, P., 1987: Silhouettes: a graphical aid to the interpretation
+	and validation of cluster analysis. Journal of Computational and
+	Applied Mathematics, 20, 53-65.},
+  journal = {Journal of Computational and Applied Mathematics},
+  year = {1987},
+  volume = {20},
+  pages = {53--65},
+  owner = {dmarta}
+}
+
+@BOOK{Southwood1978,
+  title = {Southwood, T. R. E., 1978: Ecological Methods, 2nd edn. London: Chapman
+	and Hall.},
+  publisher = {Chapman and Hall},
+  year = {1978},
+  author = {T. R. E. Southwood},
+  owner = {dmarta}
+}
+
+@ARTICLE{Strehl2002,
+  author = {A. Strehl and J. Gosh},
+  title = {Cluster ensembles - A knowledge reuse framework for combining partitions},
+  journal = {Journal of Machine Learning Research},
+  year = {2002},
+  volume = {3},
+  pages = {583--617},
+  owner = {dmarta}
+}
+
+@ARTICLE{Tang2008,
+  author = {L. Tang and D. Chen and P.-E. Karlsson and Y. Gu and T. Ou},
+  title = {Synoptic circulation and its influence on spring and summer surface
+	ozone concentrations in southern Sweden},
+  journal = {Boreal Env. Res.},
+  year = {2008},
+  volume = {14},
+  pages = {889--902},
+  owner = {philipan},
+  timestamp = {2010.03.09}
+}
+
+@BOOK{Yarnal1993,
+  title = {Synoptic climatology in environmental analysis},
+  publisher = {Belhaven Press},
+  year = {1993},
+  author = {B. Yarnal},
+  pages = {351},
+  owner = {philipan},
+  timestamp = {2010.02.07}
+}
+

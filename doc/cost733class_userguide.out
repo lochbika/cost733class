@@ -1,0 +1,106 @@
+\BOOKMARK [0][]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][]{chapter.2}{Installation}{}% 2
+\BOOKMARK [1][]{section.2.1}{Getting the source code}{chapter.2}% 3
+\BOOKMARK [1][]{section.2.2}{Using configure and make}{chapter.2}% 4
+\BOOKMARK [2][]{subsection.2.2.1}{configure}{section.2.2}% 5
+\BOOKMARK [2][]{subsection.2.2.2}{make}{section.2.2}% 6
+\BOOKMARK [1][]{section.2.3}{Manual compilation as an alternative}{chapter.2}% 7
+\BOOKMARK [1][]{section.2.4}{Troubleshooting}{chapter.2}% 8
+\BOOKMARK [2][]{subsection.2.4.1}{For configure}{section.2.4}% 9
+\BOOKMARK [2][]{subsection.2.4.2}{For make}{section.2.4}% 10
+\BOOKMARK [2][]{subsection.2.4.3}{For runtime problems}{section.2.4}% 11
+\BOOKMARK [0][]{chapter.3}{Getting started}{}% 12
+\BOOKMARK [1][]{section.3.1}{Principal usage}{chapter.3}% 13
+\BOOKMARK [1][]{section.3.2}{Quick start}{chapter.3}% 14
+\BOOKMARK [2][]{subsection.3.2.1}{Creating classifications}{section.3.2}% 15
+\BOOKMARK [2][]{subsection.3.2.2}{Evaluating classifications}{section.3.2}% 16
+\BOOKMARK [2][]{subsection.3.2.3}{Comparing classifications}{section.3.2}% 17
+\BOOKMARK [2][]{subsection.3.2.4}{Assignment to existing classifications}{section.3.2}% 18
+\BOOKMARK [2][]{subsection.3.2.5}{Rather simple \(pre\)processing}{section.3.2}% 19
+\BOOKMARK [1][]{section.3.3}{Help listing}{chapter.3}% 20
+\BOOKMARK [0][]{chapter.4}{Data input}{}% 21
+\BOOKMARK [1][]{section.4.1}{Foreign formats}{chapter.4}% 22
+\BOOKMARK [2][]{subsection.4.1.1}{ASCII data file format}{section.4.1}% 23
+\BOOKMARK [2][]{subsection.4.1.2}{COARDS NetCDF data format}{section.4.1}% 24
+\BOOKMARK [2][]{subsection.4.1.3}{GRIB data format}{section.4.1}% 25
+\BOOKMARK [2][]{subsection.4.1.4}{Other data formats}{section.4.1}% 26
+\BOOKMARK [1][]{section.4.2}{Self-generated formats}{chapter.4}% 27
+\BOOKMARK [2][]{subsection.4.2.1}{Binary data format}{section.4.2}% 28
+\BOOKMARK [2][]{subsection.4.2.2}{Catalog files}{section.4.2}% 29
+\BOOKMARK [2][]{subsection.4.2.3}{Files containing class centroids}{section.4.2}% 30
+\BOOKMARK [1][]{section.4.3}{Specifying data input and preprocessing}{chapter.4}% 31
+\BOOKMARK [2][]{subsection.4.3.1}{Specification flags}{section.4.3}% 32
+\BOOKMARK [2][]{subsection.4.3.2}{Flags for data set description}{section.4.3}% 33
+\BOOKMARK [2][]{subsection.4.3.3}{Flags for spatial data Selection}{section.4.3}% 34
+\BOOKMARK [2][]{subsection.4.3.4}{Flags for data Preprocessing}{section.4.3}% 35
+\BOOKMARK [2][]{subsection.4.3.5}{Flags for data post processing}{section.4.3}% 36
+\BOOKMARK [2][]{subsection.4.3.6}{Options for selecting dates}{section.4.3}% 37
+\BOOKMARK [2][]{subsection.4.3.7}{Using more than one data set}{section.4.3}% 38
+\BOOKMARK [2][]{subsection.4.3.8}{Options for overall PCA preprocessing of all data sets together}{section.4.3}% 39
+\BOOKMARK [1][]{section.4.4}{Examples}{chapter.4}% 40
+\BOOKMARK [2][]{subsection.4.4.1}{Simple ASCII data matrix}{section.4.4}% 41
+\BOOKMARK [2][]{subsection.4.4.2}{ASCII data file with date columns}{section.4.4}% 42
+\BOOKMARK [2][]{subsection.4.4.3}{NetCDF data selection}{section.4.4}% 43
+\BOOKMARK [2][]{subsection.4.4.4}{Date selection for classification and centroids}{section.4.4}% 44
+\BOOKMARK [0][]{chapter.5}{Data output}{}% 45
+\BOOKMARK [1][]{section.5.1}{The classification catalog}{chapter.5}% 46
+\BOOKMARK [1][]{section.5.2}{Centroids or type composites}{chapter.5}% 47
+\BOOKMARK [1][]{section.5.3}{Output on the screen}{chapter.5}% 48
+\BOOKMARK [1][]{section.5.4}{Output of the input data}{chapter.5}% 49
+\BOOKMARK [1][]{section.5.5}{Output of indices used for classification}{chapter.5}% 50
+\BOOKMARK [1][]{section.5.6}{Opengl graphics output}{chapter.5}% 51
+\BOOKMARK [0][]{chapter.6}{Classification methods}{}% 52
+\BOOKMARK [1][]{section.6.1}{Methods using predefined types}{chapter.6}% 53
+\BOOKMARK [2][]{subsection.6.1.1}{INT | interval | BIN | binclass}{section.6.1}% 54
+\BOOKMARK [2][]{subsection.6.1.2}{GWT | prototype - large scale circulation types}{section.6.1}% 55
+\BOOKMARK [2][]{subsection.6.1.3}{GWTWS | gwtws - large scale circulation types}{section.6.1}% 56
+\BOOKMARK [2][]{subsection.6.1.4}{LIT | lit - litynski threshold based method}{section.6.1}% 57
+\BOOKMARK [2][]{subsection.6.1.5}{JCT | jenkcol - Jenkinson-Collison Types}{section.6.1}% 58
+\BOOKMARK [2][]{subsection.6.1.6}{WLK | wlk - automatic weather type classification according to German metservice}{section.6.1}% 59
+\BOOKMARK [1][]{section.6.2}{Methods based on Eigenvectors}{chapter.6}% 60
+\BOOKMARK [2][]{subsection.6.2.1}{PCT | tpca - t-mode principal component analysis using oblique rotation}{section.6.2}% 61
+\BOOKMARK [2][]{subsection.6.2.2}{PTT | tpcat - t-mode principal component analysis using orthogonal rotation}{section.6.2}% 62
+\BOOKMARK [2][]{subsection.6.2.3}{PXE | pcaxtr - the extreme score method}{section.6.2}% 63
+\BOOKMARK [2][]{subsection.6.2.4}{KRZ | kruiz - Kruizingas PCA-based types}{section.6.2}% 64
+\BOOKMARK [1][]{section.6.3}{Methods using the leader algorithm}{chapter.6}% 65
+\BOOKMARK [2][]{subsection.6.3.1}{LND | lund - the Lund-method}{section.6.3}% 66
+\BOOKMARK [2][]{subsection.6.3.2}{KIR | kh - Kirchhofer}{section.6.3}% 67
+\BOOKMARK [2][]{subsection.6.3.3}{ERP | erpicum}{section.6.3}% 68
+\BOOKMARK [1][]{section.6.4}{HCL | hclust - Hierarchical Cluster analysis}{chapter.6}% 69
+\BOOKMARK [1][]{section.6.5}{Optimization algorithms}{chapter.6}% 70
+\BOOKMARK [2][]{subsection.6.5.1}{KMN | kmeans - conventional k-means with random seeds}{section.6.5}% 71
+\BOOKMARK [2][]{subsection.6.5.2}{CAP | pcaca - k-means of time filtered PC-scores and HCL starting partition}{section.6.5}% 72
+\BOOKMARK [2][]{subsection.6.5.3}{CKM | ckmeans - k-means with dissimilar seeds}{section.6.5}% 73
+\BOOKMARK [2][]{subsection.6.5.4}{DKM | dkmeans - a variant of ckmeans}{section.6.5}% 74
+\BOOKMARK [2][]{subsection.6.5.5}{PXK | pcaxtrkm - k-means using PXE starting partitions}{section.6.5}% 75
+\BOOKMARK [2][]{subsection.6.5.6}{SAN | sandra - simulated annealing and diversified randomization}{section.6.5}% 76
+\BOOKMARK [2][]{subsection.6.5.7}{SOM | som - self organizing \(feature\) maps \(neural network according to Kohonen\)}{section.6.5}% 77
+\BOOKMARK [2][]{subsection.6.5.8}{KMD | kmedoids - partitioning around medoids}{section.6.5}% 78
+\BOOKMARK [1][]{section.6.6}{Random classifications}{chapter.6}% 79
+\BOOKMARK [2][]{subsection.6.6.1}{RAN | random}{section.6.6}% 80
+\BOOKMARK [2][]{subsection.6.6.2}{RAC | randomcent}{section.6.6}% 81
+\BOOKMARK [0][]{chapter.7}{Assignments to existing classifications}{}% 82
+\BOOKMARK [1][]{section.7.1}{ASC | assign}{chapter.7}% 83
+\BOOKMARK [1][]{section.7.2}{CNT | centroid}{chapter.7}% 84
+\BOOKMARK [0][]{chapter.8}{Evaluation of classifications}{}% 85
+\BOOKMARK [1][]{section.8.1}{EVPF | evpf - explained variation and pseudo F value}{chapter.8}% 86
+\BOOKMARK [1][]{section.8.2}{ECV | exvar}{chapter.8}% 87
+\BOOKMARK [1][]{section.8.3}{WSDCIM | wsdcim - Within-type standard deviation and confidence interval of the mean}{chapter.8}% 88
+\BOOKMARK [1][]{section.8.4}{DRAT | drat - Ratio of distances within and between circulation types}{chapter.8}% 89
+\BOOKMARK [1][]{section.8.5}{FSIL | fsil - Fast Silhouette Index}{chapter.8}% 90
+\BOOKMARK [1][]{section.8.6}{SIL | sil - Silhouette Index}{chapter.8}% 91
+\BOOKMARK [1][]{section.8.7}{BRIER | brier - Brier Score}{chapter.8}% 92
+\BOOKMARK [0][]{chapter.9}{Comparison of classifications}{}% 93
+\BOOKMARK [1][]{section.9.1}{CPART | cpart - Catalog comparison}{chapter.9}% 94
+\BOOKMARK [0][]{chapter.10}{Miscellaneous functions}{}% 95
+\BOOKMARK [1][]{section.10.1}{AGG | agg - Aggregation}{chapter.10}% 96
+\BOOKMARK [1][]{section.10.2}{COR | cor - Correlation}{chapter.10}% 97
+\BOOKMARK [1][]{section.10.3}{SUB | substitute - Substitute}{chapter.10}% 98
+\BOOKMARK [0][]{chapter.11}{Visualization}{}% 99
+\BOOKMARK [0][]{chapter.12}{Development}{}% 100
+\BOOKMARK [1][]{section.12.1}{Implementing a new subroutine}{chapter.12}% 101
+\BOOKMARK [1][]{section.12.2}{Packing the directory for shipping}{chapter.12}% 102
+\BOOKMARK [1][]{section.12.3}{Use of variables in the subroutine}{chapter.12}% 103
+\BOOKMARK [1][]{section.12.4}{Using the input data from datainput.f90}{chapter.12}% 104
+\BOOKMARK [1][]{section.12.5}{The gnu autotools files}{chapter.12}% 105
+\BOOKMARK [0][]{lstnumber.-104.51}{References}{}% 106

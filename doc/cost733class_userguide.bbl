@@ -1,0 +1,208 @@
+\begin{thebibliography}{}
+
+\bibitem[Beck et~al., 2007]{Beck2007}
+Beck, C., Jacobeit, J., and Jones, P. (2007).
+\newblock Frequency and within-type variations of large scale circulation types
+  and their effects on low-frequency climate variability in central europe
+  since 1780.
+\newblock {\em Int. J. Climatology}, 27:473--491.
+
+\bibitem[Beck and Philipp, 2010]{Beck2010}
+Beck, C. and Philipp, A. (2010).
+\newblock Evaluation and comparison of circulation type classifications for the
+  european domain.
+\newblock {\em Physics and Chemistry of the Earth}, 35(9-12):374--387.
+
+\bibitem[Bernaards and Jennrich, 2005]{Bernaards2005}
+Bernaards, C. and Jennrich, R. (2005).
+\newblock Gradient projection algorithms and software for arbitrary rotation
+  criteria in factor analysis.
+\newblock {\em Educational and Psychological Measurement}, 65/5:676.
+
+\bibitem[Bissolli and Dittmann, 2003]{Bissolli2003}
+Bissolli, P. and Dittmann, E. (2003).
+\newblock Objektive wetterlagenklassen.
+\newblock In {\em Klimastatusbericht 2003}. DWD.
+
+\bibitem[Blair, 1998]{Blair1998}
+Blair, D. (1998).
+\newblock The kirchhofer technique of synoptic typing revisited.
+\newblock {\em Int. J. Climatology}, 18:1625--1635.
+
+\bibitem[Buishand and Brandsma, 1997]{Buishand1997}
+Buishand, T. and Brandsma, T. (1997).
+\newblock Comparison of circulation classification schemes for predicting
+  temperature and precipitation in the netherlands.
+\newblock {\em Int. J. Climatology}, 17:875--889.
+
+\bibitem[Calinski and Harabasz, 1974]{Calinski1974}
+Calinski, T. and Harabasz, J. (1974).
+\newblock A dendrite method for cluster analysis.
+\newblock {\em Commun. Stat.}, 3:1--27.
+
+\bibitem[Comrie, 1996]{Comrie1996}
+Comrie, A. (1996).
+\newblock An all-season synoptic climatology of air pollution in the
+  u.s.-mexico border region.
+\newblock {\em Professional Geographer}, 48:237--251.
+
+\bibitem[Dittmann et~al., 1995]{Dittmann1995}
+Dittmann, E., Barth, S., Lang, J., and Mueller-Westermeier, G. (1995).
+\newblock Objektive wetterlagenklassifikation.
+\newblock {\em Ber. Dt. Wetterd.}, 197.
+
+\bibitem[Ekstroem et~al., 2002]{Ekstrom2002}
+Ekstroem, M., Joensson, P., and Baerring, L. (2002).
+\newblock Synoptic pressure patterns associated with major wind erosion events
+  in southern sweden 1973 1991.
+\newblock {\em Climate Research}, 23:51--66.
+
+\bibitem[Enke et~al., 2005]{Enke2005a}
+Enke, W., Schneider, F., and Deutschl{\"a}nder, T. (2005).
+\newblock A novel scheme to derive optimized circulation pattern
+  classifications for downscaling and forecast purposes.
+\newblock {\em Theor. Appl. Climatol.}, 82:51--63.
+
+\bibitem[Enke and Spekat, 1997]{Enke1997}
+Enke, W. and Spekat, A. (1997).
+\newblock Downscaling climate model outputs {into} {local} and {regional}
+  weather elements by classification and regression.
+\newblock {\em Climate Research}, 8:195--207.
+
+\bibitem[Hartigan, 1975]{Hartigan1975}
+Hartigan, J. (1975).
+\newblock {\em Clustering Algorithms}.
+\newblock Wiley Series in probability and mathematical statistics. John Wiley
+  \& Sons.
+
+\bibitem[Hartigan and Wong, 1979]{Hartigan1979}
+Hartigan, J.~A. and Wong, M.~A. (1979).
+\newblock Algorithm as 136: A k-means clustering algorithm.
+\newblock {\em Journal of the Royal Statistical Society. Series C (Applied
+  Statistics)}, 28(1):100--108.
+
+\bibitem[Hewitson and Crane, 1992]{Hewitson1992}
+Hewitson, B. and Crane, R. (1992).
+\newblock Regional climates in the giss global circulation model and
+  synoptic-scale circulation.
+\newblock {\em Journal of Climate}, 5:1002--1011.
+
+\bibitem[Huth, 1996]{Huth1996}
+Huth, R. (1996).
+\newblock An intercomparison of computer-assisted circulation classification
+  methods.
+\newblock {\em Int. J. Climatol.}, 16:893--922.
+
+\bibitem[Huth, 2000]{Huth2000}
+Huth, R. (2000).
+\newblock A circulation classification scheme applicable in gcm studies.
+\newblock {\em Theor. Appl. Climatol.}, 67:1--18.
+
+\bibitem[Jenkinson and Collison, 1977]{Jenkinson1977}
+Jenkinson, A. and Collison, B. (1977).
+\newblock An initial climatology of gales over the north sea.
+\newblock In {\em Synop. Climatol. Branch, Memo. 62}. Meteorological Office.
+
+\bibitem[Jones et~al., 1993]{Jones1992}
+Jones, P., Hulme, M., and Briffa, K. (1993).
+\newblock A comparison of lamb circulation types with an objective
+  classification scheme.
+\newblock {\em International Journal of Climatology}, 13:655--663.
+
+\bibitem[Kalkstein et~al., 1987]{Kalkstein1987}
+Kalkstein, L.~S., Tan, G., and Skindlov, J.~A. (1987).
+\newblock An evaluation of three clustering procedures for use in synoptic
+  climatological classification.
+\newblock {\em J. Appl. Meteor.}, 26:717--730.
+
+\bibitem[Kalnay et~al., 1996]{Kalnay1996}
+Kalnay, E., Kanamitsua, M., Kistlera, R., Collinsa, W., Deavena, D., Gandina,
+  L., Iredella, M., Sahaa, S., Whitea, G., Woollena, J., Zhua, Y., Leetmaaa,
+  A., Reynoldsa, R., Chelliahb, M., Ebisuzakib, W., Higginsb, W., Janowiakb,
+  J., Mob, K., Ropelewskib, C., Wangb, J., Jennec, R., and Josephc, D. (1996).
+\newblock The ncep/ncar 40-year reanalysis project.
+\newblock {\em Bull. Amer. Meteor. Soc.}, 77:437--470.
+
+\bibitem[Kirchhofer, 1974]{Kirchhofer1974}
+Kirchhofer, W. (1974).
+\newblock Classification of european 500 mb patterns.
+\newblock In {\em Arbeitsbericht der Schweizerischen Meteorologischen
+  Zentralanstalt}, volume~43, page~16. Bundesamt fuer Meteorologie und
+  Klimatologie MeteoSchweiz.
+
+\bibitem[Kruizinga, 1979]{Kruizinga1979}
+Kruizinga, S. (1979).
+\newblock Objective classification of daily 500 mbar patterns.
+\newblock In {\em Preprints Sixth Conference on Probability and Statistics in
+  Atmospheric Sciences, 9-12 October 1979 Banff, Alberta}, pages 126--129,
+  Boston, MA. American Meteorological Society.
+
+\bibitem[Kuncheva and Hadjitodorov, 2004]{Kuncheva2004}
+Kuncheva, L. and Hadjitodorov, S.~T. (2004).
+\newblock Using diversity in cluster ensembles.
+\newblock {\em 2004 IEEE International Conference on Systems, Man and
+  Cybernetics}, 2:1214--1219.
+
+\bibitem[L.Hubert and Arabie, 1985]{Hubert1985}
+L.Hubert and Arabie, P. (1985).
+\newblock Comparing partitions.
+\newblock {\em Journal of Classification}, 2:193--218.
+
+\bibitem[Litynski, 1969]{Litynski1969}
+Litynski, J. (1969).
+\newblock A numerical classification of circulation patterns and weather types
+  in poland. (in polish).
+\newblock {\em Prace Panstwowego Instytutu Hydrologiczno-Meteorologicznego},
+  97:3?15.
+
+\bibitem[Lund, 1963]{Lund1963}
+Lund, I. (1963).
+\newblock Map-pattern classification by statistical methods.
+\newblock {\em J. Appl. Meteorol.}, 2:56--65.
+
+\bibitem[Milligan and Cooper, 1985]{Milligan1985}
+Milligan, G. and Cooper, M. (1985).
+\newblock An examination of procedures for determining the number of clusters
+  in a data set.
+\newblock {\em Psychometrika}, 50:159--179.
+
+\bibitem[Philipp et~al., 2010]{Philipp2010}
+Philipp, A., Bartholy, J., Beck, C., Erpicum, M., Esteban, P., Fettweis, X.,
+  Huth, R., James, P., Jourdain, S., Kreienkamp, F., Krennert, T., Lykoudis,
+  S., Michalides, S.~C., Pianko-Kluczynska, K., Post, P., Alvarez, D.~R.,
+  Schiemann, R., Spekat, A., and Tymvios, F.~S. (2010).
+\newblock Cost733cat - a database of weather and circulation type
+  classifications.
+\newblock {\em Physics and Chemistry of the Earth}, 35(9-12):360--373.
+
+\bibitem[Rand, 1971]{Rand1971}
+Rand, W.~M. (1971).
+\newblock Objective criteria for the evaluation of clustering methods.
+\newblock {\em J. Amer. Stat. Assoc.}, 66:846--850.
+
+\bibitem[Rousseeuw, 1987]{Rousseeuw1987}
+Rousseeuw, P. (1987).
+\newblock Rousseeuw, p., 1987: Silhouettes: a graphical aid to the
+  interpretation and validation of cluster analysis. journal of computational
+  and applied mathematics, 20, 53-65.
+\newblock {\em Journal of Computational and Applied Mathematics}, 20:53--65.
+
+\bibitem[Southwood, 1978]{Southwood1978}
+Southwood, T. R.~E. (1978).
+\newblock {\em Southwood, T. R. E., 1978: Ecological Methods, 2nd edn. London:
+  Chapman and Hall.}
+\newblock Chapman and Hall.
+
+\bibitem[Strehl and Gosh, 2002]{Strehl2002}
+Strehl, A. and Gosh, J. (2002).
+\newblock Cluster ensembles - a knowledge reuse framework for combining
+  partitions.
+\newblock {\em Journal of Machine Learning Research}, 3:583--617.
+
+\bibitem[Tang et~al., 2008]{Tang2008}
+Tang, L., Chen, D., Karlsson, P.-E., Gu, Y., and Ou, T. (2008).
+\newblock Synoptic circulation and its influence on spring and summer surface
+  ozone concentrations in southern sweden.
+\newblock {\em Boreal Env. Res.}, 14:889--902.
+
+\end{thebibliography}

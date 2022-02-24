@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: cost733class_userguide.aux
+The style file: apalike.bst
+Illegal, another \bibstyle command---line 231 of file cost733class_userguide.aux
+ : \bibstyle
+ :          {plainnat}
+I'm skipping whatever remains of this command
+Database file #1: cost733class_userguide.bib
+Warning--can't use both author and editor fields in Hartigan1975
+You've used 34 entries,
+            1935 wiz_defined-function locations,
+            719 strings with 10009 characters,
+and the built_in function-call counts, 14238 in all, are:
+= -- 1411
+> -- 605
+< -- 28
++ -- 230
+- -- 206
+* -- 1217
+:= -- 2481
+add.period$ -- 107
+call.type$ -- 34
+change.case$ -- 271
+chr.to.int$ -- 34
+cite$ -- 35
+duplicate$ -- 505
+empty$ -- 976
+format.name$ -- 266
+if$ -- 2751
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 36
+newline$ -- 173
+num.names$ -- 102
+pop$ -- 208
+preamble$ -- 1
+purify$ -- 273
+quote$ -- 0
+skip$ -- 377
+stack$ -- 0
+substring$ -- 1086
+swap$ -- 50
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 200
+warning$ -- 1
+while$ -- 123
+width$ -- 0
+write$ -- 447
+(There was 1 error message)
