@@ -15,13 +15,27 @@ AC_ARG_ENABLE([grib],
 
 AM_CONDITIONAL([GRIB], test x$grib = xtrue)
 
+AC_ARG_ENABLE([opengl],
+  [AS_HELP_STRING([--disable-opengl  Do not use opengl visualisation])],
+  [opengl=false],
+  [opengl=true])
+
+AM_CONDITIONAL([OPENGL], test x$opengl = xtrue)
+
+if test x$opengl = xtrue; then
+  AC_MSG_NOTICE([
+    checking for opengl!
+  ])
+  #AC_CONFIG_SUBDIRS([f03gl])
+fi
+
 if test x$grib = xtrue; then
   AC_MSG_NOTICE([
     checking for grib!
   ])
 fi
 
-AC_CONFIG_FILES([Makefile src/Makefile ])
+AC_CONFIG_FILES([Makefile f03gl/Makefile src/Makefile ])
 
 dnl makefile ...
 AC_OUTPUT

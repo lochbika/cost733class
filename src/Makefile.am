@@ -4,19 +4,27 @@ cost733class_SOURCES = globvar.f90
 cost733class_SOURCES += netcdfcheck.f90 
 cost733class_SOURCES += netcdfinput.f90 
 cost733class_SOURCES += writenetcdf.f90 
-cost733class_LDADD = $(top_srcdir)/netcdf-4.0.1/libsrc/.libs/libnetcdf.a 
+AM_FCFLAGS = -I/usr/include/ -L/usr/lib/ -fallow-invalid-boz -fallow-argument-mismatch
+cost733class_LDADD = -lnetcdff
 
 if GRIB
 cost733class_SOURCES += gribcheck.f90 
 cost733class_SOURCES += gribinput.f90 
-cost733class_LDADD += $(top_srcdir)/grib_api-1.9.18/fortran/.libs/libgrib_api_f90.a
-cost733class_LDADD += $(top_srcdir)/grib_api-1.9.18/src/.libs/libgrib_api.a
 cost733class_LDADD += -lm -ljasper
-AM_FCFLAGS += -I$(top_srcdir)/grib_api-1.9.18/fortran
 else
 cost733class_SOURCES += gribcheck-dummy.f90 
 cost733class_SOURCES += gribinput-dummy.f90 
 endif
+
+if OPENGL
+AM_FCFLAGS += -fno-underscoring -I$(top_srcdir)/f03gl -L$(top_srcdir)/f03gl
+cost733class_LDADD += -lX11 -ljpeg -lglut -lGLU -lGL
+cost733class_LDADD += $(top_srcdir)/f03gl/libf03gl.a 
+cost733class_SOURCES += GLUT_fonts.c opengl.f90
+else
+cost733class_SOURCES += opengl_dummy.f90
+endif
+
 
 cost733class_SOURCES += datainput.f90 clasinput.f90 \
 days4mon.f90 nobs4dates.f90 scan_matfile.f90 \

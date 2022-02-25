@@ -619,6 +619,8 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
+OPENGL_FALSE
+OPENGL_TRUE
 GRIB_FALSE
 GRIB_TRUE
 ac_ct_F77
@@ -720,6 +722,7 @@ enable_option_checking
 enable_silent_rules
 enable_dependency_tracking
 enable_grib
+enable_opengl
 '
       ac_precious_vars='build_alias
 host_alias
@@ -1363,6 +1366,8 @@ Optional Features:
   --disable-dependency-tracking
                           speeds up one-time build
   --disable-grib  Do not use GRIB/GRIB2 functions
+
+  --disable-opengl  Do not use opengl visualisation
 
 
 Some influential environment variables:
@@ -4477,6 +4482,34 @@ else
 fi
 
 
+# Check whether --enable-opengl was given.
+if test ${enable_opengl+y}
+then :
+  enableval=$enable_opengl; opengl=false
+else $as_nop
+  opengl=true
+fi
+
+
+ if test x$opengl = xtrue; then
+  OPENGL_TRUE=
+  OPENGL_FALSE='#'
+else
+  OPENGL_TRUE='#'
+  OPENGL_FALSE=
+fi
+
+
+if test x$opengl = xtrue; then
+  { printf "%s\n" "$as_me:${as_lineno-$LINENO}:
+    checking for opengl!
+  " >&5
+printf "%s\n" "$as_me:
+    checking for opengl!
+  " >&6;}
+  #AC_CONFIG_SUBDIRS([f03gl])
+fi
+
 if test x$grib = xtrue; then
   { printf "%s\n" "$as_me:${as_lineno-$LINENO}:
     checking for grib!
@@ -4486,7 +4519,7 @@ printf "%s\n" "$as_me:
   " >&6;}
 fi
 
-ac_config_files="$ac_config_files Makefile src/Makefile"
+ac_config_files="$ac_config_files Makefile f03gl/Makefile src/Makefile"
 
 
 cat >confcache <<\_ACEOF
@@ -4660,6 +4693,10 @@ Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${GRIB_TRUE}" && test -z "${GRIB_FALSE}"; then
   as_fn_error $? "conditional \"GRIB\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${OPENGL_TRUE}" && test -z "${OPENGL_FALSE}"; then
+  as_fn_error $? "conditional \"OPENGL\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 
@@ -5231,6 +5268,7 @@ do
   case $ac_config_target in
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+    "f03gl/Makefile") CONFIG_FILES="$CONFIG_FILES f03gl/Makefile" ;;
     "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
