@@ -535,6 +535,21 @@ subroutine netcdfcheck(par,datchar_p,lonchar_p,latchar_p,fdtchar_p,ldtchar_p,ddt
      else
         write(ddtchar_p,'(1i2.2,"d")')diftime/24
      endif
+  case ("hours since 1900-01-01 00:00:00.0")
+     if(VERBOSE>5)write(*,*)
+     call date4htime1900(ftime,year,month,day,hour)
+     if(VERBOSE>5)write(*,*)"    ###  ",year,month,day,hour
+     write(fdtchar_p,'(1i4.4,":",1i2.2,":",1i2.2,":",1i2.2)')year,month,day,hour
+
+     call date4htime1900(ltime,year,month,day,hour)
+     if(VERBOSE>5)write(*,*)"    ###  ",year,month,day,hour
+     write(ldtchar_p,'(1i4.4,":",1i2.2,":",1i2.2,":",1i2.2)')year,month,day,hour
+
+     if(diftime<24)then
+        write(ddtchar_p,'(1i2.2,"h")')diftime
+     else
+        write(ddtchar_p,'(1i2.2,"d")')diftime/24
+     endif
   case default
      !call help("ERROR: time unit in netcdf file not supported yet!")
      write(*,"(/,a)")"ERROR: time unit in netcdf file not supported yet!"

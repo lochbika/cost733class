@@ -242,7 +242,7 @@ subroutine list4dates(fdtcharo,ldtcharo,ddtcharo, nmonths,selmonth, nobs,tyear,t
      thour(1:NOBS)=max(lhour,fhour)
      !endif
   case ("h","H")
-     if(dtime/=12.and.dtime/=6.and.dtime/=3.and.dtime/=2.and.dtime/=2)then
+     if(dtime/=12.and.dtime/=6.and.dtime/=3.and.dtime/=2.and.dtime/=2.and.dtime/=1)then
         !call help("ERROR: ddt for hour must be 12, 6, 3, 2 or 1!")
         write(*,"(/,a)")"ERROR: ddt for hour must be 12, 6, 3, 2 or 1!"
         stop
