@@ -1,5 +1,4 @@
 # cost733class
-
 A fork of the cost733class software. The primary goal is to make the software package usable on modern linux distributions, such as Ubuntu or Fedora. This means that it should compile with current versions of all dependencies. Second, I hope that this repository will be the base of future development of cost733class. Help is appreciated!
 
 ## current development and progress
@@ -11,6 +10,32 @@ A fork of the cost733class software. The primary goal is to make the software pa
 ## Suggestions
 
  - Remove OpenGL (f03gl library) support?
+ 
+## Build and install
+
+### Dependencies
+Most important, GCC fortran (gfortran) must be installed to compile cost733class.
+
+Install the NetCDF library (netcdf) and the fortran bindings (netcdf-fortran). Although, installation from source is possible, using packages from your linux distribution repositories is recommended. On some linux distributions it is necessary to install also the development packages. For instance on Ubuntu 20.04 LTS (tested in VM), run
+
+  apt-get update
+  apt-get install libnetcdf-dev libnetcdff-dev
+  
+GNU automake might also be required
+
+  apt-get install automake
+
+### How to compile
+So far, it is possible to compile cost733class with only NetCDF support (at least for me on Arch Linux). Use the configure script 
+
+  ./configure --disable-grib --disable-opengl
+  
+and then run make
+
+  make
+
+## Documentation
+
 
 # original source
 The basis for this repository is the (to me) last known available source distribution of cost733class. The archive can be downloaded from [here](http://cost733.met.no/cost733clas-1.4_rev23.tgz) or [here](https://drive.google.com/file/d/1DCiDDte8PPYu2tKzsIugloOxi6NMvXJt/view?usp=sharing).
