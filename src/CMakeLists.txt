@@ -93,19 +93,24 @@ endif()
 
 # add source file depending on NetCDF library
 if(NCDF)
-target_sources(cost733class
-  PRIVATE
-    netcdfcheck.f90 
-    netcdfinput.f90 
-    writenetcdf.f90 
-)
+  target_sources(cost733class
+    PRIVATE
+      netcdfcheck.f90 
+      netcdfinput.f90 
+      writenetcdf.f90 
+  )
 else()
-target_sources(cost733class
-  PRIVATE
-    netcdfcheck-dummy.f90 
-)
+  target_sources(cost733class
+    PRIVATE
+      netcdfcheck-dummy.f90 
+  )
 endif()
 
+if(GRIB_INCLUDE)
+  include_directories(${GRIB_INCLUDE})
+else()
+  MESSAGE(STATUS "WARNING: No ecCodes includes are found.")
+endif()
 if(GRIB_LIB)
   target_link_libraries(cost733class ${GRIB_LIB})
 else()
@@ -113,31 +118,31 @@ else()
 endif()
 
 if (GRIB)
-target_sources(cost733class
-  PRIVATE
-    gribcheck.f90 
-    gribinput.f90
-)
+  target_sources(cost733class
+    PRIVATE
+      gribcheck.f90 
+      gribinput.f90
+  )
 else ()
-target_sources(cost733class
-  PRIVATE
-    gribcheck-dummy.f90 
-    gribinput-dummy.f90
-)
+  target_sources(cost733class
+    PRIVATE
+      gribcheck-dummy.f90 
+      gribinput-dummy.f90
+  )
 endif ()
 
 # add source file depending on f03gl library
 if(OPENGL)
-target_sources(cost733class
-  PRIVATE
-    GLUT_fonts.c
-    opengl.f90
-)
+  target_sources(cost733class
+    PRIVATE
+      GLUT_fonts.c
+      opengl.f90
+  )
 else()
-target_sources(cost733class
-  PRIVATE
-    opengl_dummy.f90
-)
+  target_sources(cost733class
+    PRIVATE
+      opengl_dummy.f90
+  )
 endif()
 
 install(TARGETS cost733class RUNTIME DESTINATION bin)

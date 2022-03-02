@@ -8,7 +8,7 @@ if (NOT CMAKE_BUILD_TYPE)
   set (CMAKE_BUILD_TYPE RELEASE CACHE STRING
       "Choose the type of build, options are: None Debug Release."
       FORCE)
-endif (NOT CMAKE_BUILD_TYPE)
+endif ()
 
 # FFLAGS depend on the compiler
 get_filename_component (Fortran_COMPILER_NAME ${CMAKE_Fortran_COMPILER} NAME)
@@ -29,26 +29,26 @@ option(GRIB "Enable girb file support" OFF)
 
 # check and set NetCDF requirements if enabled
 if (NCDF)
-FIND_PATH(NCDF_INCLUDE
-  NAMES
-  netcdf.mod
-  PATHS
-  $ENV{NCDF_INCLUDE_PATH}
-  /usr/include
-  $ENV{HOME}/include
-  DOC "NetCDF include directory (must contain netcdf.mod)"
-)
-FIND_LIBRARY(NCDF_LIB
-  NAMES
-  libnetcdff.so
-  PATHS
-  $ENV{NCDF_LIB_PATH}
-  /usr/lib
-  /usr/lib64
-  $ENV{HOME}/lib
-  $ENV{HOME}/lib64
-  DOC "NetCDF fortran library"
-)
+  FIND_PATH(NCDF_INCLUDE
+    NAMES
+      netcdf.mod
+    PATHS
+      $ENV{NCDF_INCLUDE_PATH}
+      /usr/include
+      $ENV{HOME}/include
+    DOC "NetCDF include directory (must contain netcdf.mod)"
+  )
+  FIND_LIBRARY(NCDF_LIB
+    NAMES
+      libnetcdff.so
+    PATHS
+      $ENV{NCDF_LIB_PATH}
+      /usr/lib
+      /usr/lib64
+      $ENV{HOME}/lib
+      $ENV{HOME}/lib64
+    DOC "NetCDF fortran library"
+  )
 endif ()
 
 # configure OpenGL support (f03gl)
@@ -60,17 +60,27 @@ endif ()
 
 # configure Grib api (ecCodes)
 if (GRIB)
-FIND_LIBRARY(GRIB_LIB
-  NAMES
-  libeccodes_f90.so
-  PATHS
-  $ENV{GRIB_LIB_PATH}
-  /usr/lib
-  /usr/lib64
-  $ENV{HOME}/lib
-  $ENV{HOME}/lib64
-  DOC "ecCodes fortran library"
-)
+  FIND_PATH(GRIB_INCLUDE
+    NAMES
+      eccodes.mod
+    PATHS
+      $ENV{GRIB_INCLUDE_PATH}
+      /usr/include
+      /usr/lib/x86_64-linux-gnu/fortran/gfortran-mod-15
+      $ENV{HOME}/include
+    DOC "ecCodes include directory (must contain eccodes.mod)"
+  )
+  FIND_LIBRARY(GRIB_LIB
+    NAMES
+      libeccodes_f90.so
+    PATHS
+      $ENV{GRIB_LIB_PATH}
+      /usr/lib
+      /usr/lib64
+      $ENV{HOME}/lib
+      $ENV{HOME}/lib64
+    DOC "ecCodes fortran library"
+  )
 endif ()
 
 add_subdirectory(src)
