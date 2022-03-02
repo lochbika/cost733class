@@ -23,9 +23,11 @@ else ()
 endif ()
 
 # options for external library support
-option(NCDF "Enable NetCDF support" ON)
+option(NCDF "Enable NetCDF file support" ON)
+option(OPENGL "Enable OpenGL support" OFF)
+option(GRIB "Enable girb file support" OFF)
 
-
+# check and set NetCDF requirements if enabled
 if (NCDF)
 FIND_PATH(NCDF_INCLUDE
   NAMES
@@ -40,12 +42,34 @@ FIND_LIBRARY(NCDF_LIB
   NAMES
   libnetcdff.so
   PATHS
-  $ENV{CDI_LIB_PATH}
+  $ENV{NCDF_LIB_PATH}
   /usr/lib
   /usr/lib64
   $ENV{HOME}/lib
   $ENV{HOME}/lib64
   DOC "NetCDF fortran library"
+)
+endif ()
+
+# configure OpenGL support (f03gl)
+if (OPENGL)
+
+else ()
+
+endif ()
+
+# configure Grib api (ecCodes)
+if (GRIB)
+FIND_LIBRARY(GRIB_LIB
+  NAMES
+  libeccodes_f90.so
+  PATHS
+  $ENV{GRIB_LIB_PATH}
+  /usr/lib
+  /usr/lib64
+  $ENV{HOME}/lib
+  $ENV{HOME}/lib64
+  DOC "ecCodes fortran library"
 )
 endif ()
 

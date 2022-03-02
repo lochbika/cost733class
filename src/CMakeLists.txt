@@ -91,6 +91,7 @@ else()
   MESSAGE(STATUS "WARNING: No NetCDF lib was found.")
 endif()
 
+# add source file depending on NetCDF library
 if(NCDF)
 target_sources(cost733class
   PRIVATE
@@ -102,6 +103,40 @@ else()
 target_sources(cost733class
   PRIVATE
     netcdfcheck-dummy.f90 
+)
+endif()
+
+if(GRIB_LIB)
+  target_link_libraries(cost733class ${GRIB_LIB})
+else()
+  MESSAGE(STATUS "WARNING: No ecCodes lib was found.")
+endif()
+
+if (GRIB)
+target_sources(cost733class
+  PRIVATE
+    gribcheck.f90 
+    gribinput.f90
+)
+else ()
+target_sources(cost733class
+  PRIVATE
+    gribcheck-dummy.f90 
+    gribinput-dummy.f90
+)
+endif ()
+
+# add source file depending on f03gl library
+if(OPENGL)
+target_sources(cost733class
+  PRIVATE
+    GLUT_fonts.c
+    opengl.f90
+)
+else()
+target_sources(cost733class
+  PRIVATE
+    opengl_dummy.f90
 )
 endif()
 
