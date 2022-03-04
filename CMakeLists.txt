@@ -36,7 +36,7 @@ endif ()
 # options for external library support
 option(NCDF "Enable NetCDF file support" ON)
 option(OPENGL "Enable OpenGL support" OFF)
-option(GRIB "Enable girb file support" OFF)
+option(GRIB "Enable grib file support" OFF)
 
 # check and set NetCDF requirements if enabled
 if (NCDF)
@@ -62,14 +62,14 @@ if (NCDF)
   )
 endif ()
 
-# configure OpenGL support (f03gl)
+# check for OpenGL support (f03gl)
 if (OPENGL)
-
+  add_subdirectory(f03gl)
 else ()
 
 endif ()
 
-# configure Grib api (ecCodes)
+# check for Grib api (ecCodes)
 if (GRIB)
   FIND_PATH(GRIB_INCLUDE
     NAMES

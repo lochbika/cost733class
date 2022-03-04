@@ -1,5 +1,4 @@
-set(target_name cost733class)
-add_executable(${target_name} "")
+add_executable(cost733class "")
 
 target_sources(cost733class
   PRIVATE
@@ -79,20 +78,20 @@ target_sources(cost733class
     effectivesamplesize.f90 
 )
 
-if(NCDF_INCLUDE)
-  include_directories(${NCDF_INCLUDE})
-else()
-  MESSAGE(STATUS "WARNING: No NetCDF includes are found.")
-endif()
-
-if(NCDF_LIB)
-  target_link_libraries(cost733class ${NCDF_LIB})
-else()
-  MESSAGE(STATUS "WARNING: No NetCDF lib was found.")
-endif()
-
-# add source file depending on NetCDF library
+# handle everything for NetCDF library
 if(NCDF)
+  if(NCDF_INCLUDE)
+    include_directories(${NCDF_INCLUDE})
+  else()
+    MESSAGE(STATUS "WARNING: No NetCDF includes are found.")
+  endif()
+
+  if(NCDF_LIB)
+    target_link_libraries(cost733class ${NCDF_LIB})
+  else()
+    MESSAGE(STATUS "WARNING: No NetCDF lib was found.")
+  endif()
+
   target_sources(cost733class
     PRIVATE
       netcdfcheck.f90 
@@ -106,18 +105,19 @@ else()
   )
 endif()
 
-if(GRIB_INCLUDE)
-  include_directories(${GRIB_INCLUDE})
-else()
-  MESSAGE(STATUS "WARNING: No ecCodes includes are found.")
-endif()
-if(GRIB_LIB)
-  target_link_libraries(cost733class ${GRIB_LIB})
-else()
-  MESSAGE(STATUS "WARNING: No ecCodes lib was found.")
-endif()
-
+# handle everything for ecCodes (grib_api) library
 if (GRIB)
+  if(GRIB_INCLUDE)
+    include_directories(${GRIB_INCLUDE})
+  else()
+    MESSAGE(STATUS "WARNING: No ecCodes includes are found.")
+  endif()
+  if(GRIB_LIB)
+    target_link_libraries(cost733class ${GRIB_LIB})
+  else()
+    MESSAGE(STATUS "WARNING: No ecCodes lib was found.")
+  endif()
+
   target_sources(cost733class
     PRIVATE
       gribcheck.f90 
@@ -131,13 +131,14 @@ else ()
   )
 endif ()
 
-# add source file depending on f03gl library
+# handle everything for f03gl library (opengl support)
 if(OPENGL)
   target_sources(cost733class
     PRIVATE
       GLUT_fonts.c
       opengl.f90
   )
+  target_link_libraries(cost733class f03gl)
 else()
   target_sources(cost733class
     PRIVATE
