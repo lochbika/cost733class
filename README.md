@@ -20,23 +20,23 @@ Most important, GCC fortran (gfortran) must be installed to compile cost733class
 
 Install the NetCDF library (netcdf), the fortran bindings (netcdf-fortran) and ECcodes. Although, installation from source is possible, using packages from your linux distribution repositories is recommended. On some linux distributions it is necessary to install also the development packages. For instance on Ubuntu 20.04 LTS (tested in VM), run
 
-  apt-get update
-  apt-get install libnetcdf-dev libnetcdff-dev libeccodes-dev
+    apt-get update
+    apt-get install libnetcdf-dev libnetcdff-dev libeccodes-dev
   
 CMake might also be required
 
-  apt-get install cmake cmake-curses-gui
+    apt-get install cmake cmake-curses-gui
 
 ### How to compile
 CMake is now the build system for cost733class. So far, it is possible to compile cost733class with NetCDF and Grib support (at least for me on Arch Linux and Ubuntu 20.04):
 
-  mkdir build && cd build
-  cmake ..
-  make
+    mkdir build && cd build
+    cmake ..
+    make
 
 You can also tweak the build options with
 
-  ccmake ..
+    ccmake ..
   
 ## Documentation
 The userguide is in doc/
