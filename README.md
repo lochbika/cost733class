@@ -3,39 +3,42 @@ A fork of the cost733class software. The primary goal is to make the software pa
 
 ## current development and progress
  
- - [x] compiles with newer version of the NetCDF library (tested with NetCDF version 4.8.1 and NetCDF-fortran 4.5.3)
- - [ ] make it compile with the new version of ECcodes (Grib file support)
- - [ ] A complete overhaul of the build system (automake, autoconf). Maybe switch to CMake?
+ - [x] compile with newer version of the NetCDF library (tested with NetCDF version 4.8.1 and NetCDF-fortran 4.5.3)
+ - [x] make it compile with the new version of ECcodes (Grib file support)
+ - [x] Switch from autotools to CMake
+ - [ ] compile with OpenGL support (f03gl as static library?)
  
 ## Suggestions
 
- - Remove OpenGL (f03gl library) support?
- 
+ - Maybe remove OpenGL (f03gl library) support?
+
 ## Build and install
 
 ### Dependencies
 Most important, GCC fortran (gfortran) must be installed to compile cost733class.
 
-Install the NetCDF library (netcdf) and the fortran bindings (netcdf-fortran). Although, installation from source is possible, using packages from your linux distribution repositories is recommended. On some linux distributions it is necessary to install also the development packages. For instance on Ubuntu 20.04 LTS (tested in VM), run
+Install the NetCDF library (netcdf), the fortran bindings (netcdf-fortran) and ECcodes. Although, installation from source is possible, using packages from your linux distribution repositories is recommended. On some linux distributions it is necessary to install also the development packages. For instance on Ubuntu 20.04 LTS (tested in VM), run
 
-  apt-get update
-  apt-get install libnetcdf-dev libnetcdff-dev
+    apt-get update
+    apt-get install libnetcdf-dev libnetcdff-dev libeccodes-dev
   
-GNU automake might also be required
+CMake might also be required
 
-  apt-get install automake
+    apt-get install cmake cmake-curses-gui
 
 ### How to compile
-So far, it is possible to compile cost733class with only NetCDF support (at least for me on Arch Linux). Use the configure script 
+CMake is now the build system for cost733class. So far, it is possible to compile cost733class with NetCDF and Grib support (at least for me on Arch Linux and Ubuntu 20.04):
 
-  ./configure --disable-grib --disable-opengl
+    mkdir build && cd build
+    cmake ..
+    make
+
+You can also tweak the build options with
+
+    ccmake ..
   
-and then run make
-
-  make
-
 ## Documentation
-
+The userguide is in doc/
 
 # original source
 The basis for this repository is the (to me) last known available source distribution of cost733class. The archive can be downloaded from [here](http://cost733.met.no/cost733clas-1.4_rev23.tgz) or [here](https://drive.google.com/file/d/1DCiDDte8PPYu2tKzsIugloOxi6NMvXJt/view?usp=sharing).

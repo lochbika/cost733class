@@ -2,7 +2,7 @@ subroutine gribcheck(par,datchar_p,lonchar_p,latchar_p,fdtchar_p,ldtchar_p,ddtch
      & fnum,lnum,varchar,slechar_p,slochar_p,slachar_p,nx,ny)
 
   use globvar
-  use grib_api
+  use eccodes
   implicit none
 
   integer :: par
