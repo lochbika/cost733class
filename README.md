@@ -7,6 +7,7 @@ A fork of the cost733class software. The primary goal is to make the software pa
  - [x] make it compile with the new version of ECcodes (Grib file support)
  - [x] Switch from autotools to CMake
  - [ ] compile with OpenGL support (f03gl as static library?)
+ - [x] create a Debian/Ubuntu package
  
 ## Suggestions
 
@@ -36,6 +37,16 @@ CMake is now the build system for cost733class. So far, it is possible to compil
 You can also tweak the build options with
 
     ccmake ..
+    
+### Build Debian/Ubuntu package
+CMake can also be used to create a Debian package that can also be installed in Ubuntu.
+
+    mkdir build && cd build
+    cmake -DGRIB=ON -DNCDF=ON .. 
+    cmake --build .
+    cpack
+    
+This will create a .deb file in the build directory. On most Ubuntu systems the package can be installed by simply double clicking on it.
   
 ## Documentation
 The userguide is in doc/

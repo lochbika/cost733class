@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
-project(cost733class)
+project(cost733class
+  HOMEPAGE_URL https://github.com/lochbika/cost733class
+  VERSION 1.4.0
+)
 
 enable_language (Fortran)
 include(CheckFortranCompilerFlag)
@@ -95,3 +98,13 @@ if (GRIB)
 endif ()
 
 add_subdirectory(src)
+
+install(TARGETS cost733class
+)
+
+SET(CPACK_GENERATOR "DEB")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Kai Lochbihler <kai.lochbihler@gmx.de>")
+SET(CPACK_PACKAGE_NAME "cost733class")
+# dependencies for Ubuntu 20.04
+SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libnetcdf15, libnetcdff7, libeccodes0")
+INCLUDE(CPack)
