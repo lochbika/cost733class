@@ -54,6 +54,8 @@ The userguide is in doc/
 # original source
 The basis for this repository is the (to me) last known available source distribution of cost733class. The archive can be downloaded from [here](http://cost733.met.no/cost733clas-1.4_rev23.tgz) or [here](https://drive.google.com/file/d/1DCiDDte8PPYu2tKzsIugloOxi6NMvXJt/view?usp=sharing).
 
+There is now also [a repository by the original author](https://git.rz.uni-augsburg.de/philipan/cost733class-1.4) of cost733class, Andreas Philipp, which contains the original sources (at the time of writing this).
+
 # original README
 cost733class is a program package for weather and circulation type classification.
     
